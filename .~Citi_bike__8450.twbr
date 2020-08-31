@@ -1,0 +1,1671 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0326.1623                               -->
+<workbook source-build='2020.1.2 (20201.20.0326.1623)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='combined_csv' inline='true' name='federated.1ktvzi21v34wce114r3lh0661sfn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined_csv' name='textscan.1n677qr1xxeicx18993eu15ts0y4'>
+            <connection class='textscan' directory='/Users/williamforsyth/Documents/uc_davis/Homework_Repos/tableau-citi-bike-analysis/data/raw_data' filename='combined_csv.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1n677qr1xxeicx18993eu15ts0y4' name='combined_csv.csv' table='[combined_csv#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='real' name='tripduration' ordinal='0' />
+            <column datatype='datetime' name='starttime' ordinal='1' />
+            <column datatype='datetime' name='stoptime' ordinal='2' />
+            <column datatype='real' name='start station id' ordinal='3' />
+            <column datatype='string' name='start station name' ordinal='4' />
+            <column datatype='real' name='start station latitude' ordinal='5' />
+            <column datatype='real' name='start station longitude' ordinal='6' />
+            <column datatype='real' name='end station id' ordinal='7' />
+            <column datatype='string' name='end station name' ordinal='8' />
+            <column datatype='real' name='end station latitude' ordinal='9' />
+            <column datatype='real' name='end station longitude' ordinal='10' />
+            <column datatype='real' name='bikeid' ordinal='11' />
+            <column datatype='string' name='usertype' ordinal='12' />
+            <column datatype='integer' name='birth year' ordinal='13' />
+            <column datatype='real' name='gender' ordinal='14' />
+            <column datatype='string' name='tripduration_sum' ordinal='15' />
+            <column datatype='string' name='gender_unknown' ordinal='16' />
+            <column datatype='string' name='gender_male' ordinal='17' />
+            <column datatype='string' name='gender_female' ordinal='18' />
+            <column datatype='string' name='subscriber' ordinal='19' />
+            <column datatype='string' name='customer' ordinal='20' />
+            <column datatype='string' name='total_uses' ordinal='21' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration_sum</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tripduration_sum]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>tripduration_sum</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_unknown</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender_unknown]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>gender_unknown</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_male</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender_male]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>gender_male</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_female</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender_female]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>gender_female</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subscriber</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[subscriber]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>subscriber</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[customer]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>customer</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_uses</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[total_uses]</local-name>
+            <parent-name>[combined_csv.csv]</parent-name>
+            <remote-alias>total_uses</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Bikeid' datatype='real' name='[bikeid]' role='measure' type='ordinal' />
+      <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='Customer' datatype='string' name='[customer]' role='dimension' type='nominal' />
+      <column caption='End Station Id' datatype='real' name='[end station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='End Station Name' datatype='string' name='[end station name]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='real' name='[gender]' role='measure' type='quantitative' />
+      <column caption='Gender Female' datatype='string' name='[gender_female]' role='dimension' type='nominal' />
+      <column caption='Gender Male' datatype='string' name='[gender_male]' role='dimension' type='nominal' />
+      <column caption='Gender Unknown' datatype='string' name='[gender_unknown]' role='dimension' type='nominal' />
+      <column caption='Start Station Id' datatype='real' name='[start station id]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='Stoptime' datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+      <column caption='Subscriber' datatype='string' name='[subscriber]' role='dimension' type='nominal' />
+      <column caption='Total Uses' datatype='string' name='[total_uses]' role='dimension' type='nominal' />
+      <column caption='Tripduration' datatype='real' name='[tripduration]' role='measure' type='quantitative' />
+      <column caption='Tripduration Sum' datatype='string' name='[tripduration_sum]' role='dimension' type='nominal' />
+      <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5399' measure-ordering='alphabetic' measure-percentage='0.4601' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:usertype:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Subscriber&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Customer&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='age' inline='true' name='federated.1kln5sy08q3x7p1aom8hl0i6vzcw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='age' name='textscan.0tonam41jq3t811e06b0u0em1sa8'>
+            <connection class='textscan' directory='/Users/williamforsyth/Documents/uc_davis/Homework_Repos/tableau-citi-bike-analysis/data/raw_data' filename='age.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0tonam41jq3t811e06b0u0em1sa8' name='age.csv' table='[age#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='birth year' ordinal='0' />
+            <column datatype='real' name='tripduration_sum' ordinal='1' />
+            <column datatype='integer' name='gender_unknown' ordinal='2' />
+            <column datatype='integer' name='gender_male' ordinal='3' />
+            <column datatype='integer' name='gender_female' ordinal='4' />
+            <column datatype='integer' name='subscriber' ordinal='5' />
+            <column datatype='integer' name='customer' ordinal='6' />
+            <column datatype='integer' name='total_uses' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration_sum</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tripduration_sum]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>tripduration_sum</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_unknown</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender_unknown]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>gender_unknown</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender_male]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>gender_male</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender_female]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>gender_female</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subscriber</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[subscriber]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>subscriber</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[customer]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>customer</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_uses</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_uses]</local-name>
+            <parent-name>[age.csv]</parent-name>
+            <remote-alias>total_uses</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_female:qk]&quot;' value='Female' />
+          <alias key='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_male:qk]&quot;' value='Male' />
+          <alias key='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_unknown:qk]&quot;' value='Unknown' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+      <column caption='Customer' datatype='integer' name='[customer]' role='measure' type='quantitative' />
+      <column caption='Gender Female' datatype='integer' name='[gender_female]' role='measure' type='quantitative' />
+      <column caption='Gender Male' datatype='integer' name='[gender_male]' role='measure' type='quantitative' />
+      <column caption='Gender Unknown' datatype='integer' name='[gender_unknown]' role='measure' type='quantitative' />
+      <column caption='Subscriber' datatype='integer' name='[subscriber]' role='measure' type='quantitative' />
+      <column caption='Total Uses' datatype='integer' name='[total_uses]' role='measure' type='quantitative' />
+      <column caption='Tripduration Sum' datatype='real' name='[tripduration_sum]' role='measure' type='quantitative' />
+      <column-instance column='[gender_female]' derivation='Attribute' name='[attr:gender_female:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gender_male]' derivation='Attribute' name='[attr:gender_male:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gender_unknown]' derivation='Attribute' name='[attr:gender_unknown:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[customer]' derivation='Sum' name='[sum:customer:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gender_female]' derivation='Sum' name='[sum:gender_female:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gender_male]' derivation='Sum' name='[sum:gender_male:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[gender_unknown]' derivation='Sum' name='[sum:gender_unknown:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[subscriber]' derivation='Sum' name='[sum:subscriber:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_uses]' derivation='Sum' name='[sum:total_uses:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[tripduration_sum]' derivation='Sum' name='[sum:tripduration_sum:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.408978' measure-ordering='alphabetic' measure-percentage='0.591022' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[attr:gender_unknown:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[attr:gender_male:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:Number of Records:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_unknown:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:total_uses:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[attr:gender_female:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_male:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:subscriber:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:customer:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_female:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:tripduration_sum:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Age' type='sheet' worksheet='Total Trips by Age' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Age' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Bike Usage - Hrs Usage'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Used Bikes - Hours of Usage, Jan - July 2020</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_csv' name='federated.1ktvzi21v34wce114r3lh0661sfn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ktvzi21v34wce114r3lh0661sfn'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Bikeid' datatype='real' name='[bikeid]' role='measure' type='ordinal' />
+            <column-instance column='[bikeid]' derivation='None' name='[none:bikeid:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[bikeid]' derivation='Sum' name='[sum:bikeid:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ktvzi21v34wce114r3lh0661sfn].[none:bikeid:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:bikeid:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' scope='cols' value='Hours of Usage' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ktvzi21v34wce114r3lh0661sfn].[none:bikeid:ok]</rows>
+        <cols>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</cols>
+      </table>
+      <simple-id uuid='{8C29BCCA-5C45-42AE-92FE-383DBFD73BD6}' />
+    </worksheet>
+    <worksheet name='Bike Usage - Trips Taken'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Used Bikes - Trips Taken, Jan - July 2019</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_csv' name='federated.1ktvzi21v34wce114r3lh0661sfn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ktvzi21v34wce114r3lh0661sfn'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Bikeid' datatype='real' name='[bikeid]' role='measure' type='ordinal' />
+            <column-instance column='[bikeid]' derivation='None' name='[none:bikeid:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='None' name='[none:starttime:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ktvzi21v34wce114r3lh0661sfn].[none:starttime:qk]' included-values='in-range'>
+            <min>#2019-01-01 00:00:00.132#</min>
+            <max>#2019-07-31 23:59:58.726#</max>
+          </filter>
+          <filter class='quantitative' column='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>678</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ktvzi21v34wce114r3lh0661sfn].[none:bikeid:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ktvzi21v34wce114r3lh0661sfn].[none:starttime:qk]</column>
+            <column>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' scope='cols' value='Number of Uses' />
+            <encoding attr='space' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' field-type='quantitative' max='469' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ktvzi21v34wce114r3lh0661sfn].[none:bikeid:ok]</rows>
+        <cols>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</cols>
+      </table>
+      <simple-id uuid='{EFA68FC1-52BB-4638-819B-A221796EBD76}' />
+    </worksheet>
+    <worksheet name='Peak Hours 2019'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Peak Hour Usage (Jan - July 2019)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_csv' name='federated.1ktvzi21v34wce114r3lh0661sfn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ktvzi21v34wce114r3lh0661sfn'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ktvzi21v34wce114r3lh0661sfn].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2019' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ktvzi21v34wce114r3lh0661sfn].[yr:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]' scope='cols' value='Time of day (24hr)' />
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' scope='rows' value='Bike Journys' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>(PEAK)</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Hour of Starttime: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Number of Records: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]</field>
+                      <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>17</value>
+                    <value>2061525</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='143'>
+            <formatted-text>
+              <run fontcolor='#787878'>Hour of Starttime: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Number of Records: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='8.0159279778393344'>
+                  <node-reference>
+                    <axis>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='912564.67289719626'>
+                  <node-reference>
+                    <axis>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='112' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{A50B1C08-6129-49C5-BEC6-BD5EE3739798}' />
+    </worksheet>
+    <worksheet name='Peak Hours 2020'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Peak Hour Usage (Jan - July 2020)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_csv' name='federated.1ktvzi21v34wce114r3lh0661sfn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ktvzi21v34wce114r3lh0661sfn'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:qk]' pivot='key' type='quantitative' />
+            <column caption='Starttime' datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ktvzi21v34wce114r3lh0661sfn].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2020' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ktvzi21v34wce114r3lh0661sfn].[yr:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]' scope='cols' value='Time of day (24hr)' />
+            <format attr='title' class='0' field='[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]' scope='rows' value='Bike Journys' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>(PEAK)</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Hour of Starttime: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Number of Records: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:ok]</field>
+                      <field>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>17</value>
+                    <value>2061525</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='150'>
+            <formatted-text>
+              <run fontcolor='#787878'>Hour of Starttime: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Number of Records: </run>
+              <run bold='true'>&lt;[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='8.0505540166204987'>
+                  <node-reference>
+                    <axis>[federated.1ktvzi21v34wce114r3lh0661sfn].[hr:starttime:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='518829.04405874497'>
+                  <node-reference>
+                    <axis>[federated.1ktvzi21v34wce114r3lh0661sfn].[sum:Number of Records:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-100' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{334C88E8-D9DC-45A3-A184-A295BAA7D62F}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='combined_csv' name='federated.1ktvzi21v34wce114r3lh0661sfn' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ktvzi21v34wce114r3lh0661sfn'>
+            <column-instance column='[start station latitude]' derivation='Avg' name='[avg:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='Avg' name='[avg:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_uses]' derivation='None' name='[none:total_uses:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' caption='Start Station Latitude' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Start Station Longitude' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Start Station Name' datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column caption='Total Uses' datatype='string' name='[total_uses]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1ktvzi21v34wce114r3lh0661sfn].[none:start station name:nk]' />
+              <lod column='[federated.1ktvzi21v34wce114r3lh0661sfn].[none:total_uses:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ktvzi21v34wce114r3lh0661sfn].[avg:start station latitude:qk]</rows>
+        <cols>[federated.1ktvzi21v34wce114r3lh0661sfn].[avg:start station longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{C48B7864-E88E-40F6-8C01-65DB9A84A06A}' />
+    </worksheet>
+    <worksheet name='Total Trips by Age'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='age' name='federated.1kln5sy08q3x7p1aom8hl0i6vzcw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kln5sy08q3x7p1aom8hl0i6vzcw'>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Gender Female' datatype='integer' name='[gender_female]' role='measure' type='quantitative' />
+            <column caption='Gender Male' datatype='integer' name='[gender_male]' role='measure' type='quantitative' />
+            <column caption='Gender Unknown' datatype='integer' name='[gender_unknown]' role='measure' type='quantitative' />
+            <column-instance column='[birth year]' derivation='None' name='[none:birth year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[birth year]' derivation='None' name='[none:birth year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_female]' derivation='Sum' name='[sum:gender_female:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_male]' derivation='Sum' name='[sum:gender_male:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_unknown]' derivation='Sum' name='[sum:gender_unknown:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_unknown:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_male:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_female:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_unknown:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_male:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_female:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:qk]' included-values='in-range'>
+            <min>1940</min>
+            <max>2004</max>
+          </filter>
+          <slices>
+            <column>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]</column>
+            <column>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]' scope='rows' value='Usage' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' value='Gender'>
+              <formatted-text>
+                <run>Gender</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]</rows>
+        <cols>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:ok]</cols>
+      </table>
+      <simple-id uuid='{515D7937-AD25-4D34-AF6C-69F30895F7BC}' />
+    </worksheet>
+    <worksheet name='Total Trips by UserType'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='age' name='federated.1kln5sy08q3x7p1aom8hl0i6vzcw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kln5sy08q3x7p1aom8hl0i6vzcw'>
+            <column caption='Birth Year' datatype='integer' name='[birth year]' role='dimension' type='quantitative' />
+            <column caption='Customer' datatype='integer' name='[customer]' role='measure' type='quantitative' />
+            <column caption='Gender Male' datatype='integer' name='[gender_male]' role='measure' type='quantitative' />
+            <column caption='Gender Unknown' datatype='integer' name='[gender_unknown]' role='measure' type='quantitative' />
+            <column-instance column='[birth year]' derivation='None' name='[none:birth year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[birth year]' derivation='None' name='[none:birth year:qk]' pivot='key' type='quantitative' />
+            <column caption='Subscriber' datatype='integer' name='[subscriber]' role='measure' type='quantitative' />
+            <column-instance column='[customer]' derivation='Sum' name='[sum:customer:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_male]' derivation='Sum' name='[sum:gender_male:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[gender_unknown]' derivation='Sum' name='[sum:gender_unknown:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[subscriber]' derivation='Sum' name='[sum:subscriber:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:customer:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:subscriber:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_unknown:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:gender_male:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:customer:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[sum:subscriber:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='quantitative' column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:qk]' included-values='in-range'>
+            <min>1940</min>
+            <max>2004</max>
+          </filter>
+          <slices>
+            <column>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]</column>
+            <column>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]' scope='rows' value='Usage' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' value='UserType'>
+              <formatted-text>
+                <run>UserType</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[Multiple Values]</rows>
+        <cols>[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[none:birth year:ok]</cols>
+      </table>
+      <simple-id uuid='{CF4EB764-27F5-4A59-AF1D-3DE395D694FB}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Age'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='49000' id='1' name='Total Trips by UserType' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='49000' id='7' name='Total Trips by Age' w='82400' x='800' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone fixed-size='404' h='49000' id='6' is-fixed='true' name='Total Trips by UserType' pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='463' h='49000' id='8' is-fixed='true' name='Total Trips by Age' pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' w='16000' x='83200' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='10' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='9' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='1' is-fixed='true' name='Total Trips by UserType' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='404' h='49000' id='6' name='Total Trips by UserType' pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='7' is-fixed='true' name='Total Trips by Age' w='82400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='463' h='49000' id='8' name='Total Trips by Age' pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' w='16000' x='83200' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9C7D4353-1983-4386-ABF6-84AF6FB9C3CA}' />
+    </dashboard>
+    <dashboard name='Most Used Bikes'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='3' name='Bike Usage - Hrs Usage' w='49200' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='98000' id='5' name='Bike Usage - Trips Taken' w='49200' x='50000' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='18' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Bike Usage - Hrs Usage' w='49200' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98000' id='5' is-fixed='true' name='Bike Usage - Trips Taken' w='49200' x='50000' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{800320FB-328F-4DA7-860D-17F406B45FBB}' />
+    </dashboard>
+    <dashboard name='Peak Usage COVID'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49000' id='3' name='Peak Hours 2019' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='49000' id='5' name='Peak Hours 2020' w='98400' x='800' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='9' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='8' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='49000' id='3' is-fixed='true' name='Peak Hours 2019' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49000' id='5' is-fixed='true' name='Peak Hours 2020' w='98400' x='800' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9A15A417-7706-452D-A52A-2220236CD9E0}' />
+    </dashboard>
+    <dashboard name='Peak Usage Hours'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='3' name='Peak Hours 2019' w='98400' x='800' y='1000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='98000' id='3' is-fixed='true' name='Peak Hours 2019' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{AB16A834-A247-447C-AE4F-9DCCABDE6F34}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Peak Hours 2019'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{40C07706-EF9E-4A19-BC8F-C960DACA6EFB}' />
+    </window>
+    <window class='worksheet' name='Peak Hours 2020'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{88C1B0AC-40DC-46A4-B76A-8DE629E31C2D}' />
+    </window>
+    <window class='worksheet' name='Bike Usage - Trips Taken'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B75272EA-C3CB-4517-B856-421E4BAD921C}' />
+    </window>
+    <window class='worksheet' name='Bike Usage - Hrs Usage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{68878A2E-338A-42D1-8B61-8FCE66ECB79F}' />
+    </window>
+    <window class='worksheet' name='Total Trips by Age'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7A8FB966-1FF3-4EC0-AFD2-C35EC4465678}' />
+    </window>
+    <window class='worksheet' name='Total Trips by UserType'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1kln5sy08q3x7p1aom8hl0i6vzcw].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FB19F3BB-F079-4698-9FF9-7078C0403B03}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{EA79FBAA-1631-4B25-9D46-4FC00559872F}' />
+    </window>
+    <window class='dashboard' name='Peak Usage Hours'>
+      <viewpoints>
+        <viewpoint name='Peak Hours 2019'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{DBE4BB8B-1855-408C-AA7A-7B90F1DD444B}' />
+    </window>
+    <window class='dashboard' name='Peak Usage COVID'>
+      <viewpoints>
+        <viewpoint name='Peak Hours 2019'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Peak Hours 2020'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{3792CFEF-63FC-469C-A300-04C4688EB02E}' />
+    </window>
+    <window class='dashboard' name='Most Used Bikes'>
+      <viewpoints>
+        <viewpoint name='Bike Usage - Hrs Usage' />
+        <viewpoint name='Bike Usage - Trips Taken' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{111EA02B-6BC6-4ED0-B2C6-9C215667C6A7}' />
+    </window>
+    <window class='dashboard' name='Age'>
+      <viewpoints>
+        <viewpoint name='Total Trips by Age'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Trips by UserType'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FADCEB21-B4A5-4980-96EA-F5F955FDDE9D}' />
+    </window>
+  </windows>
+</workbook>
